@@ -1,0 +1,12 @@
+\\192.168.1.84\\D:\\Assignment Day8
+1> create a BookClientApp class for Book case study
+	--show menu for 
+		-book services
+		-member servcice
+		call services with the help of switch case
+2> create service and dao layer for BankAccout
+(use generic for bankAccount service method)
+create a BankClientApp class for BankAccout
+	--show menu for 
+		-bankAccount services
+		call services with the help of switch case

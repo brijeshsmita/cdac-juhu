@@ -1,0 +1,31 @@
+45Mins
+------------------------------------------------------------------------
+Create a hierarchy of abstract class Trainee with protected variables :
+>traineeId (auto-generated)
+>traineeName
+>coName( blank final)
+
+and abstract methods as : 
+>attendTraining()
+>doAssignments()
+>writeTest()
+
+and non abstract methods as :
+>getters and setters
+>toString method
+>print()
+
+Trainee abstract class is extended by :-  
+1. JavaTrainee  2. CloudTrainee  3.OracleTrainee 
+
+
+JavaTrainee class has following methods :- 
+1.presentation
+2.caseStudy
+
+CloudTrainee   class :-
+1. storageProject
+
+Oracle Trainee class :-
+1. rdbms
+2. project 

@@ -1,0 +1,25 @@
+
+\\192.168.1.84
+
+1> create a class Employee with the following instance variables
+int empId;
+String ename;
+double salary;
+String coName;
+
+->Two method -> setEmployee ,print()
+->create main and in that create 2 object of Employee and call
+  setEmployee() and print() method on each of them
+  
+2>create a class MyMethod
+	with following methods
+	a> max(int n1, int n2)- to find out maximum of 2 numbers
+	b> min(int n1, int n2)- to find out minimum of 2 numbers
+	c> oddEven(int n1, int n2)- to find out odd and even of 2 numbers
+	d> prime(int n1)- to check wether the given number is prime or not
+	e> factprial(int n1)- to find factors of the given number
+	a> maxMin(int n1, int n2,int n3)- to find out maximum 
+		and minimun of 3 numbers
+		
+	->write a main method and create the object of MyMethod class
+	and call each method and display the output
