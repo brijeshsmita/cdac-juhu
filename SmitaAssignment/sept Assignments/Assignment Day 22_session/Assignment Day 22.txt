@@ -1,2 +1,0 @@
-q1. In the HelloWorld Web Page created add the 
-functionality of logout Servlet using session

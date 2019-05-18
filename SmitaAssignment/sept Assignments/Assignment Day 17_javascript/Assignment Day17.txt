@@ -1,1 +1,0 @@
-q1. Make a Project consisting of Login Form(on clicking login welcome page should be displayed) and Register Form . Apply validation on both the forms using javascript.

@@ -1,7 +1,0 @@
-1> create a page that
- has a layout for a page displaying Tic-Tac-Toe Board
-2> Attach click event handler to the tiles in your borad
-3> figure out how to alternate turns between two players
-4> If it's player A turn then, make it Player Y turn.
-and vise versa
-	- do this by changing the value of the current player variable

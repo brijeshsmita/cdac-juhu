@@ -1,3 +1,0 @@
-Q1. Make an application using Greet.htmlm on clicking "greet "  it should print Good Morning or Good Afternoon according to the time.
-
-Q2. In your previous Login form project add register.html(rename to customerRegister.html) and add the details of customer to the database using Bean Class (customer.java) and display it using customer.jsp

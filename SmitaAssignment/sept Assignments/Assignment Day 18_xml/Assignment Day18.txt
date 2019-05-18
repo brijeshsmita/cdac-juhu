@@ -1,1 +1,0 @@
-Q1. The Product details of CyberShoppe consist of the name of the product,a breif description of the product, the price and the available quantity on hand . Each product is uniquely identified by a product ID.Make the appropriate xml and dtd.
