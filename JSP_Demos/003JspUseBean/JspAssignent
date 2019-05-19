@@ -1,0 +1,9 @@
+1> create a employee.jsp page(ems-employee)
+2> create a Employee.java class
+3> create business method setEmployee() method
+	which will do the save the employee to db
+4> create showEmployee.jsp 
+which will have<jsp:useBean> action where
+u will use <jsp:setProperty> and
+also call business method by using <jsp:setProperty>
+then display employee details using <jsp:getProperty>

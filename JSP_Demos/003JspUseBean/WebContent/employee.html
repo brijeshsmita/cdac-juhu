@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+.red
+{
+	color: red;
+}
+</style>
+</head>
+<body>
+	<fieldset>
+	<legend>Employee Details</legend>
+	<form name="myForm" action="showEmployee.jsp" onsubmit="return validateForm();" method="post">
+		<table border="1" style="padding=10px">
+			<tr>
+				<td align="right">Employee Id</td>
+				<td><input type="number" id="empId" name="empId" required="required" required="required"/></td>
+				<td id="empIdError">&nbsp;<span class="red">*</span></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Employee Name</td>
+				<td><input type="text" id="ename" name="ename" required="required" placeholder="Full Name(Only characters)"/></td>
+				<td id="empNameError">&nbsp;<span class="red">*</span></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Employee KIN Id</td>
+				<td><input type="text" id="kinId" name="kinId" required="required" placeholder="Format:KIN***"/></td>
+				<td id="kinIdError">&nbsp;<span class="red">*</span></td>
+	</tr>
+			
+			<tr>
+				<td align="right">Email</td>
+				<td><input type="email" id="email" name="email" required="required" placeholder="format:example@domain.com"/></td>
+				<td id="emailIdError">&nbsp;<span class="red">*</span></td>
+			</tr>
+		<!-- 	int empId, String ename, String kinId,
+ String email,
+	String phoneNo, String address, String dob, 
+	String doj, int deptId,
+	int roleId, int projId -->			
+			<tr>
+				<td align="right">Phone Number</td>
+				<td><input type="text" id="phoneNo" name="phoneNo" required="required" placeholder="+91**********"/></td>
+				<td id="phoneNoError">&nbsp;<span class="red">*</span></td>
+			</tr>
+			<tr>
+				<td align="right">Address</td>
+				<td><textarea id="address" name="address"></textarea></td>
+				<td id="addressError">&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="right">Date Of Birth</td>
+				<td><input type="text" id="dob" name="dob" required="required" placeholder="yyyy/MM/dd"/></td>
+				<td id="dobError">&nbsp;<span class="red">*</span></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Date Of Joining</td>
+				<td><input type="text" id="doj" name="doj" required="required" placeholder="yyyy/MM/dd"/></td>
+				<td id="dojError">&nbsp;<span class="red">*</span></td>
+			</tr>
+			<tr>
+				<td align="right">Department Id</td>
+				<td><input type="number" id="deptId" name="deptId" required="required"/></td>
+				<td id="deptIdError">&nbsp;<span class="red">*</span></td>
+			</tr>
+			<tr>
+				<td align="right">Project Id</td>
+				<td><input type="number" id="projId" name="projId" required="required"/></td>
+				<td id="projecttIdError">&nbsp;<span class="red">*</span></td>
+			</tr>
+			<tr>
+				<td align="right">Role Id</td>
+				<td><input type="number" id="roleId" name="roleId" required="required"/></td>
+				<td id="roleIdError">&nbsp;<span class="red">*</span></td>
+			</tr>
+			
+			<tr>
+				<td>&nbsp;</td>
+				<td align="right"></td>
+				<td><input type="submit" value="submit"/>&nbsp;
+				<input type="reset" value="CLEAR" id="reset"/></td>
+			</tr>
+		</table>
+	</form>
+	</fieldset>
+</body>
+</html>
+
+<!-- private int empId;
+	private String empName;
+	private String kinId;
+	private String emailId;
+	private String phoneNo;
+	private Date dob;
+	private Date doj;
+	private String address;
+	private int deptId;
+	private int projectId;
+	private int roleId;
+	
+ -->

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel='stylesheet' href='css/register.css' type='text/css' />
+<script src="js/register.js"></script>
+</head>
+<body>
+<a href="home.html" >Back</a>|<a href="home.html">Login</a>
+	<H1>Registration Page</H1>
+	<p><b>Use tab keys to move from one input field to the next.</b></p>
+	<form name='registration' action="registration.jsp">
+		<ul>
+			<li><label for="username">User Name:</label></li>
+			<li><input type="text" name="username" size="12" /></li>
+			
+			<li><label for="password">Password:</label></li>
+			<li><input type="password" name="password" size="12" /></li>
+			
+			<li><label for="name">Name:</label></li>
+			<li><input type="text" name="name" size="50" /></li>
+			
+			<li><label for="address">Address:</label></li>
+			<li><input type="text" name="address" size="50" /></li>
+			
+			<li><label for="country">Country:</label></li>
+			<li><select name="country">
+					<option selected="" >(Please select a country)</option>
+					<option value="AF" value="Default">Australia</option>
+					<option value="AL">Canada</option>
+					<option value="DZ">India</option>
+					<option value="AS">Russia</option>
+					<option value="AD">USA</option>
+				</select>
+			</li>
+			<li><label for="zip">ZIP Code:</label></li>
+			<li><input type="number" name="zip" /></li>
+			
+			<li><label for="email">Email:</label></li>
+			<li><input type="email" name="email" size="50" /></li>
+			
+			<li><label id="gender">Sex:</label></li>
+			<li><input type="radio" name="gender" value="Male" /><span>Male</span></li>
+			<li><input type="radio" name="gender" value="Female" /><span>Female</span></li>
+			
+			<li><label>Language:</label></li>
+			<li><input type="checkbox" name="english" value="English" checked /><span>English</span></li>
+			<li><input type="checkbox" name="nonenglish" value="Non English" /><span>Non English</span></li>
+			
+			<li><label for="description">About:</label></li>
+			<li><textarea name="description" id="desc"></textarea></li>
+			
+			<li><input type="submit" /></li>
+		</ul>
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
