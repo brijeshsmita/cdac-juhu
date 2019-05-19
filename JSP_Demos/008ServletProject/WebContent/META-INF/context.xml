@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context>
+	<Resource 
+		name="jdbc/empds" 
+		auth="Container" 
+		type="javax.sql.DataSource"
+		maxActive="100" 
+		maxIdle="30" 
+		maxWait="10000" 
+		driverClassName="oracle.jdbc.OracleDriver"
+		url="jdbc:oracle:thin:@localhost:1521:xe" 
+		username="system"
+		password="oracle" 
+		/>
+</Context>
+<!-- 
+name
+Name of the resource.
+auth
+Specify authentication mechanism for the application code, can be Application or Container.
+type
+The fully qualified Java class name expected by the web application when it performs a lookup for this resource.
+maxActive
+Maximum number of database connections in pool. Set to -1 for no limit.
+maxIdle
+Maximum number of idle database connections to retain in pool. Set to -1 for no limit.
+maxWait
+Maximum time to wait for a database connection to become available in ms, in this example 10 seconds. An Exception is thrown if this timeout is exceeded. Set to -1 to wait indefinitely.
+driverClassName
+The fully qualified Java class name of the database driver. For MySQL Connector/J, it is com.mysql.jdbc.Driver.
+url
+The JDBC connection URL.
+username
+MySQL database user name.
+password
+MySQL database user password.
+ -->

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>007Servlet</display-name>
+  <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+  </welcome-file-list>
+  <servlet>	
+    <servlet-name>MyFirstServlet</servlet-name><!-- logical name -->
+  	<servlet-class>com.cg.servlet.MyFirstServlet</servlet-class>
+  	<!-- fully qualified class name -->
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MyFirstServlet</servlet-name>
+  	<url-pattern>/MyFirstServlet</url-pattern>
+  	<!-- published name of the servlet -->
+  </servlet-mapping>
+  <servlet>	
+    <servlet-name>first</servlet-name><!-- logical name -->
+  	<servlet-class>com.cg.servlet.FirstServlet</servlet-class>
+  	<!-- fully qualified class name -->
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>first</servlet-name>
+  	<url-pattern>/FirstServlet</url-pattern>
+  	<!-- published name of the servlet -->
+  </servlet-mapping>
+</web-app>

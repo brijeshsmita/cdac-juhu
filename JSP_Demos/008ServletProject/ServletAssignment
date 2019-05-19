@@ -1,0 +1,11 @@
+1> create a EmployeeRegisterServlet to Register the 
+	employee, then show the registration detail and 
+	also show login page (using requestDispatcher include()
+	method and ask user to login after registration
+	eg:
+	request	.getRequestDispatcher("/login.html")
+		.include(request, response);
+	
+2>  create a EmployeeLoginServlet to authenticate the 
+	employee and dispatch valid user to WelcomeEmployeeServlet
+	and invalid user to InvalidEmployeeServlet

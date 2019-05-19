@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register Page</title>
+<style type="text/css">
+.red {
+	color: red;
+}
+</style>
+<!-- <script type="text/javascript" src="js/07FormValidation.js" ></script> -->
+</head>
+<body>
+	<h3>Registration Page</h3>
+	<form id="theForm" method="post" 
+	action="RegisterServlet" 
+	target="myframe">
+<table border="1">
+<tr>
+	<td>Name</td>
+	<td><input type="text" id="name" name="name"
+		required="required" /></td>
+<td id="nameError">&nbsp; <span class="red">*</span></td>
+<tr>
+	<td>Address</td>
+	<td><textarea id="address" name="address"></textarea></td>
+	<td id="addressError" class="red">&nbsp;</td>
+</tr>
+<!-- number input -->
+<tr>
+	<td>Zip Code</td>
+	<td><input type="number" id="zipcode" name="zipcode" /></td>
+	<td id="zipcodeError" class="red">&nbsp; <span class="red">*</span></td>
+</tr>
+<!-- drop down List -->
+<tr>
+	<td>Country</td>
+	<td><select id="country" name="country">
+			<option value="India">India</option>
+			<option value="USA" selected="selected">USA</option>
+			<option value="UK">UK</option>
+			<option value="UAE">UAE</option>
+	</select><br /></td>
+	<td id="countryError" class="red">&nbsp; <span class="red">*</span></td>
+</tr>
+<!-- radio buttons -->
+<tr>
+	<td>Gender</td>
+	<td><input type="radio" name="gender" value="m" />Male <input
+		type="radio" name="gender" value="f" />Female</td>
+	<td id="genderError" class="red">&nbsp; <span class="red">*</span></td>
+</tr>
+<!-- Check box -->
+<tr>
+	<td>Preferences</td>
+	<td><input type="checkbox" name="skill" value="Ruby"/>Ruby
+	<input type="checkbox" name="skill" value="Groovy" />Groovy 
+	<input type="checkbox" name="skill" value="Bluetooth" />Bluetooth</td>
+	<td id="colorError" class="red">&nbsp; <span class="red">*</span></td>
+</tr>
+<tr>
+<td>Phone<span class="red">*</span></td>
+<td><input type="number" id="phone" name="phone" /></td>
+<td id="phoneError" class="red">&nbsp;</td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="email" id="email" name="email" /></td>
+<td id="emailError" class="red">&nbsp; <span class="red">*</span></td>
+</tr>
+<tr>
+<td>password (6-8 characters)</td>
+<td><input type="password" id="password" name="password" /></td>
+<td id="passwordError" class="red">&nbsp; <span class="red">*</span></td>
+</tr>
+<tr>
+<td>Verify password</td>
+<td><input type="password" id="pwVerified" name="pwVerified" /></td>
+<td id="pwVerifiedError" class="red">&nbsp; <span class="red">*</span></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td><input type="submit" value="SEND" id="submit" />&nbsp; <input
+		type="reset" value="CLEAR" id="reset" /></td>
+	<td>&nbsp;</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

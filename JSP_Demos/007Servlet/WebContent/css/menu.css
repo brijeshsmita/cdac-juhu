@@ -1,0 +1,43 @@
+header{
+	padding: 20px 20px 20px 400px; 
+	color:blue;
+}
+#menu{
+	padding: 0px;
+	pad
+}
+#menu li{
+	display:inline;
+}
+#menu li a{	
+	background-color:yellow;
+	color:blue;
+	padding:10px 50px 20px 40px;
+	text-decoration:none;
+}
+#menu li a:hover{
+	background-color:lightgreen;
+}
+#nav {
+    line-height:30px;
+    height:400px;
+    width:200px;
+    float:left;
+    padding:5px;   
+}
+#nav li a{	
+	color:blue;
+	text-decoration:none;
+}
+#section {	
+    width:350px;
+    float:left;
+    padding:10px; 	 
+}
+#footer {
+    background-color:black;
+    color:yellow;
+    clear:both;
+    text-align:center;
+   padding:10px;	 	 
+}
