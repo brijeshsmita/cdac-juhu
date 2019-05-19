@@ -1,0 +1,19 @@
+JSP Assignments
+_________________________________________________________
+
+1> create a dynamic web project JSP_Assignment_urName
+2> create index.jsp with following links
+	login
+	register
+	about Us
+	Contact Us
+3> create header.jsp with background-color of ur choice, and which has the name of your web application and include it in the index.jsp page using include directives
+
+4>create footer.jsp with background-color of ur choice with session creation time,and include it in the index.jsp page using include action
+
+5> create login.jsp file which will call authenticate.jsp page to perform validtation login using MVC model 1 using <jsp:useBean> actions
+
+6> create a registration page and display the entered details in the regSuccess.jsp page using <jsp:useBean>
+
+7> Handle error using Declarative error handling as well as errorPage.jsp
+
