@@ -1,0 +1,12 @@
+Q1. Create a home.html file and format it as follows:
+-> create header division which consists of the header  
+-> create nav division which consists of the menu (home,login,register)
+->create content division which consists of the two- three paragraphs
+->crete footer division 
+
+
+Q2. FAQs -
+
+1. Difference between Application Server and Web Server?
+2. What is web server?
+3. What is J2EE Architecture? 

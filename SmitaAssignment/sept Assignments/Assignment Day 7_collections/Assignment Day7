@@ -1,0 +1,37 @@
+\\192.168.1.84\\D:\\Assignment Day7
+1> create a class MyDate implements Comparable
+	private int day,month,year(all 10 rules)+ovrride equals and hashcode
+2>  create a class Employee implements Comparable	
+	private int empId( auto generate it)
+	private static int numId;
+	private  String ename;
+	private double salary;
+	private MyDate joinDate;
+	private static String coName;
+	(all 10 rules)+ovrride equals and hashcode
+3> create a class EmpNameComparator implements Comparator
+	- to provide sorting by name
+4> create a class EmpJoinDateComparator implements Comparator
+	- to provide sorting by joinDate
+5> create a class EmpSalaryComparator implements Comparator
+	- to provide sorting by salary	
+6> create an interface EmployeeService
+	public Employee findById(int empId);
+	public Employee findByName(String ename);
+	public ArrayList<Employee> findAllEmployees();	
+ -> create a class EmployeeServiceImpl which implements
+ 	EmployeeService interface 
+ 	-in findById() method throw User Defined Exception
+ 	if employee not found
+ 	-in findByName() method throw User Defined Exception
+ 	if employee not found
+
+
+if(this.month<o.month)
+					flag=-1;
+				else if (this.month==o.month)
+					if(this.day<o.day)
+						flag=-1;
+					else if(this.day==o.day)
+					flag=0;
+			}

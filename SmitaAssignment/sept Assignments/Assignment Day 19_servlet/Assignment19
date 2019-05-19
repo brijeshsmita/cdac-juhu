@@ -1,0 +1,28 @@
+1> use your previous HTML project
+	-where in main page we have provide links for 
+	-all the topics we covered in servlet today
+	-each link will be opening a related html page for input
+	 or servlet as required 
+	-provide back and home link in each and evry html or servlet
+2> Use the same javascript registration from for register.html link
+	- fetch all the request parameter and show with the help of
+	- RegisterServlet
+3> create ConfigServlet and set the init param for it in web.xml
+	1> CreatedBy :- value
+	2> Copyright :- value
+	fetch all the init param in the doPost Method and display them
+4> create ContextServlet and set
+	the init param for the whole application in web.xml
+	1> driver :- value
+	2> url :- value
+	3> username:-
+	4> password:-	
+	-fetch all the init param in 
+	the ContextServlet init(ServletConfig config) method
+	and obtain the Connection for the database
+	
+	
+	
+	
+	
+	 

@@ -1,0 +1,61 @@
+
+\\192.168.1.84\\D:\\Assignment Day3
+
+1> create a class Student 
+ with the following instance variables
+private int rollNo;
+private static int id;//use it to auto-generate the rollNo
+private String sname;
+private double [] marks;
+private static String collageName;
+
+->Two method 
+	-> calculateMarks(double ... marks)//use varArg
+ 	-> print()
+->Override toString()
+	-> return all properties of student,except and return calculateMarks
+	   instead of marks
+->create main and in that create 3 object of Student and call
+ overloaded constructor on each of them
+ and print all the three objects
+  
+2>create a class Account 
+ with the following instance variables
+private int accNo;
+private static int id;//use it to auto-generate the rollNo
+private String accHolderName;
+private String [] phone;//2 save 2 phone numbers
+private String email;
+private double curBal;
+private static String bankName;
+->Two method 
+	-> public boolean checkBalance(double amount){
+//if amount is less then balance then return false else return true
+	}
+ 	-> showAccDetails()//to print account details
+	->Override ToString()
+	-> return all properties of Account
+	-> public void deposit(double amount)
+	-> public void withdraw(double amount){
+		//call checkBalance(amount) to check balance first
+		//if true the print appropriate message
+		//else print low balance message  
+		//perform withdraw
+	}
+->create main and in that create 3 object of Account and call
+ overloaded constructor on each of them
+ and print all the three objects
+ 1st object is withdrawing 1000
+ 2nd object is withdrawing 2000 and depositing 4000
+ 3rd  object is withdrawing 1400 and depositing 6500 
+ call showAccDetails on all the 3 objects
+ 
+ 3>create a class TestAccountVarArg
+ 	->create a method 
+ 		public static void printAllAccount(Account ... accArr){
+ 			//code to print all Account in passed through varArg
+ 		}
+ 	
+ 	In main method
+ 	-> create 4 objects of Account calling overloaded constructor
+ 	-> call printAllAccount(pass all the 4 Account object)
