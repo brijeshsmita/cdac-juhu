@@ -1,0 +1,6 @@
+include directives are used to include static files in the jsp page
+<%@include file="HtmlFilePath"%>
+
+where as include actions are used to include dynamic pages in the jsp page
+
+<jsp:include page="JspPagePath">

@@ -1,0 +1,9 @@
+JST SQL tag
+1> to get datasource connection
+<sql:setDataSource>
+
+2> for DML operation (Insert,Update,Delete)
+<sql:update>
+
+3> for DQL operation (Select query)
+<sql:select>

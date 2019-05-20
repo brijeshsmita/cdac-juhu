@@ -1,0 +1,46 @@
+JSP
+
+1. Java server pages is server side technology
+	which extends the capability of webserver
+	to handle request and generate dynamic response
+
+2. JSP is used to segregate presentation logic from business logic.
+
+3. abstract form of servlet , which provides various implicit or predefined object.
+
+4. provides various JSP tag to write dynamic content on the webpage.
+
+5. 80% of html and 20% 
+java code within html
+
+
+JSP TAgs
+
+1> Scripting Tags
+		-Scriptlets    -used to write java code        <%         %>
+		-Expression -used to print expression      <%=         %>   no semicolan
+	-Declaration -used to declare method 
+							and variable      <%!         %>
+		-JSP Comment (hidden comments)            <%--      --%>
+
+
+2> JSP Actions
+
+		<jsp:include>
+			<jsp:param>
+
+		<jsp:useBean>
+			<jsp:setProperty>
+			<jsp:getProperty>
+
+JSP implicit/predefined Object
+
+1> request                                                   ServletRequest
+2> response                                                ServletResponse
+3> session                                                   HttpSession
+4> config                                                    ServletConfig
+5> application                                          ServletContext
+6>pageContext                                         PageContext
+7> out                                                          JSPWriter
+8> page                                                       Object
+9> exception                                              Exception

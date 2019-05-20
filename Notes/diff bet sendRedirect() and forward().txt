@@ -1,0 +1,8 @@
+diff bet include() and forward()
+diff bet sendRedirect() and forward()
+
+sendRedirect                          forward()
+
+1> method of ServletResponse	  method of RequestDispatcher
+2> client side re-direction	  server side re-direction
+3> new request url              resquest url remains the same

@@ -1,0 +1,29 @@
+Arithemetic Operator
+
++
+-
+*
+/  
+%
+
+Logical Operator
+
+&&  and
+||  or
+!   not
+
+Conditional Operator
+==  eq
+!=  ne
+<=  le
+>=  ge
+>   gt
+<   lt
+
+empty 
+
+eg: list.empty
+
+
+
+
