@@ -1,0 +1,13 @@
+EL and JSTL 
+
+1> convert yesterday's login and registration assignment of useBean assignment to EL.(use EL instead of <jsp:getProperty>)
+
+2> create a ProductWebApplication using layered architecture 
+and create following jsp page
+a> index.jsp with following links
+	
+	1> List All Product -> ProductServlet.jsp (doGet method)(forward)-> listProduct.jsp
+(to be done later after 4pm)
+2> Add Product -> addProductPage.jsp-> ProductServlet.jsp (doPost method)if added success(forward)-> listProduct.jsp
+	else Index page (include) error message
+	
