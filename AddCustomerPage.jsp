@@ -8,11 +8,11 @@
 </head>
 <body>
 	<h1>Add New Customer</h1>
-	<form action="AddCustomerServlet">
+	<form action="CustomerController" method="post">
 		<table border="1" cellpadding="5">
 			<tr>
 				<th>Customer Id:</th>
-				<td><input type="hidden" name="customerId" /></td>
+				<td><input type="hidden" value=${pageContext.session.id } name="customerId" /></td>
 				<!-- input type name must match 
 				to Customer instance variable -->
 			</tr>
