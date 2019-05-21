@@ -1,0 +1,31 @@
+1> create a login,logout MVC application using HttpSession.
+Model -> Login.java class
+		Integer userId
+		String username
+		String password
+		String role
+views->index.jsp-> with link of ->Login.jsp 
+	login form with action to ->LoginServlet
+Controller ->LoginServlet
+which will authenticate the user credentials 
+and according dispatch the request to the specific view
+( if valid credentials -> 
+(HttpSession session = request.getSession(false);
+if(session!=null)
+maintain username in session attribute 
+->forward ->Welcome.jsp
+else
+	include Login.jsp
+if invalid credentials the -> include Login.jsp
+
+
+Welcome.jsp-will have a link to logout.jsp
+Along with Welcome username (from sessioScope)
+
+Logout.jsp -> will invalidate the session and 
+<%if(session!=null)
+	session.invalidate()
+%>
+<jsp:forward page="index.jsp">
+
+2> practice the cookie demo from javaTpoint
