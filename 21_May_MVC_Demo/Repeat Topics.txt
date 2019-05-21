@@ -1,0 +1,10 @@
+Repeat Topics
+
+1> JDBC architecture
+2> Servlets
+3> Servlets Redirection
+4> Dont use ConnectionUtil
+5> Session Management
+	-HttpSession
+	-Cookie
+6> HttpServletRequest and HttpServletResponse methods(self study)

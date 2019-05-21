@@ -1,0 +1,8 @@
+class Customer{
+	private Integer customerId;
+	private String firstName;
+	private String lastName;
+	private String mobileNo;
+	private String email;
+
+}
