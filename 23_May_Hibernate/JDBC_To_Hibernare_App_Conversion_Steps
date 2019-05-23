@@ -1,0 +1,18 @@
+/*
+ * Steps to convert MVC JDBC Book App to MVC Hibernate App
+ * 1> Add the mysql and hibernate jars
+ * 2> paste the hibernate.cfg.xml file in src * 
+ * 3> change the Database properties in the hibernate.cfg.xml file
+ * 4> change the mapping class name in the hibernate.cfg.xml file <mapping class ="">
+ * 5> annotate the entity model class 
+ * 	and make the primary key Id as auto-generated
+ */
+public class BookDao implements IBookDao{
+	//prepwork -1
+	private SessionFactory factory;
+	private Session session;
+	private Transaction tx;
+	public BookDao() {
+		factory=new Configuration().configure().buildSessionFactory();
+		session= factory.openSession();
+	}

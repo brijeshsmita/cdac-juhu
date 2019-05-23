@@ -1,0 +1,4 @@
+1> create a java project 014Hibernate_CRUD_Layered_App
+2> copy paste the working project lib folder
+and add the mysqljars and hibernate jar files to build path
+3> copy paste the hibernate.cfg.xml in src folder
