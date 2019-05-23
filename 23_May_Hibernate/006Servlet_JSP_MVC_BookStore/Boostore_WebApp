@@ -1,0 +1,81 @@
+1> Database
+	book_master
+		book_id;
+		title;
+		author;
+		price;
+		
+2> create a dynamic web project -> 
+	add jar files in the WebContent/WEB-INF/lib
+(DO NOT add jars to build path in web Application)
+
+3> create a class (com.cdac.bookstore.model) ClassName
+		bookId;
+		title;
+		author;
+		price;
+			1> package
+			2> public class ClassName (in PascalCase) eg: MyFirstClass
+			3> private instanceVariables (in camelCase) eg: private String firstName
+			4> no-arg contructor
+			5> getter and setter (if u make any changes to the properties
+			then generate getters and setters again)
+			6> toString an if required Overloaded contructor
+			7> if dealing with Sorting or Set collection
+			(override equals and hashcode)
+4> create a custom exception class 
+eg: com.cdac.bookstore.exception.BookException
+
+5> now we will decide what services my object will provide.
+	create a dao interface
+	eg: com.cdac.bookstore.dao.IBookDao
+	each dao layer method should return something 
+	and must throws UserDefinedException
+		(never have void as return type)
+		List<Book> listAllBooks() throws BookException;
+6> create ConnectionUtil class to connect and disconnect from db.
+using Connection pool (DataSource)
+eg: com.cdac.bookstore.util.ConnectionUtil
+-copy paste the ConnectionUtil 
+-rename the package
+-Replace the CustomException with your CustomException
+-Organize imports
+-save 
+
+this connection util will refer database credentials 
+from the 'db.properties' file (in-order to achieve database independent code)
+make changes to the file path in ur program
+File file = new File("C:\\Users\\Smita B Kumar\\Downloads\\Bookstore\\Bookstore\\db.properties");
+keep it in the project
+7> now we will create dao implementation class
+	eg: com.cdac.bookstore.dao.BookDao
+and provide database code
+//prepwork -1
+	private Connection jdbcConnection;
+	then call connect() method in each method
+	and after the work done call disconnect() method
+
+8>  now we will decide what services my object will provide.
+	create a service interface
+	eg: com.cdac.bookstore.service.IBookService
+	
+9>  create a service implementation class
+	eg: com.cdac.bookstore.service.BookService	
+	
+	create Object of Dao interface
+	eg: IBookDao bookDao = new BookDao();
+	
+	//call dao layer method in each and every method of service
+	//make sure that none of the method return null.
+	//return the object  
+
+
+
+
+
+
+
+
+
+
+
