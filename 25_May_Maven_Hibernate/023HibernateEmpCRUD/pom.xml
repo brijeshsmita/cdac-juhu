@@ -1,0 +1,131 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.cdac.hibernate</groupId>
+	<artifactId>023HibernateEmpCRUD</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- Add dependencies(jars) for Database, Hibernate and many more -->
+
+	<!-- maven does dependency management -download the jars from central maven 
+		repository (of jar files) https://mvnrepository.com/ stores the jars to the 
+		central repository or download the jars from remote maven repository(avilable 
+		to the firm and - creates a local repository by default the repository folder 
+		name is .m2/repository which is avilable at the current user) -->
+
+	<dependencies>
+
+		<!-- dependecies for Hibernate -->
+
+		<dependency>
+
+			<groupId>org.hibernate</groupId>
+
+			<artifactId>hibernate-core</artifactId>
+
+			<version>4.3.10.Final</version>
+
+		</dependency>
+
+
+
+		<dependency>
+
+			<groupId>org.hibernate</groupId>
+
+			<artifactId>hibernate-entitymanager</artifactId>
+
+			<version>4.3.10.Final</version>
+
+		</dependency>
+
+		<!-- logging -->
+
+		<dependency>
+
+			<groupId>org.slf4j</groupId>
+
+			<artifactId>slf4j-log4j12</artifactId>
+
+			<version>1.7.12</version>
+
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+
+		<dependency>
+
+			<groupId>mysql</groupId>
+
+			<artifactId>mysql-connector-java</artifactId>
+
+			<version>5.1.6</version>
+
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/oracle/ojdbc6 -->
+
+		<dependency>
+
+			<groupId>com.oracle</groupId>
+
+			<artifactId>ojdbc6</artifactId>
+
+			<version>11.2.0.3</version>
+
+		</dependency>
+
+	</dependencies>
+
+	<!-- Repository for ORACLE ojdbc6. -->
+
+	<repositories>
+
+
+
+		<repository>
+
+			<id>codelds</id>
+
+			<url>https://code.lds.org/nexus/content/groups/main-repo</url>
+
+		</repository>
+
+	</repositories>
+
+	<build>
+
+		<!-- <sourceDirectory>src</sourceDirectory> -->
+
+		<plugins>
+
+			<plugin>
+
+				<artifactId>maven-compiler-plugin</artifactId>
+
+				<version>3.3</version>
+
+				<!-- Java Version -->
+
+				<configuration>
+
+					<source>1.8</source>
+
+					<target>1.8</target>
+
+				</configuration>
+
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+
+
+	<!-- As oracle dependency is not avilable in the remote repo therefore we 
+		will add the remote repo -->
+
+
+
+</project>

@@ -1,0 +1,3 @@
+com\cdac\hibernate\custapp\CustomerApplication.class
+com\cdac\hibernate\client\CustomerCRUDMain.class
+com\cdac\hibernate\model\Customer.class
