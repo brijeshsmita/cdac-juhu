@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- SQL Dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+
+		<!-- Database Connection Settings -->
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orahome</property>
+		<property name="hibernate.connection.username">system</property>
+		<property name="hibernate.connection.password">system</property>
+		<property name="show_sql">	</property>
+
+		<!-- Specifying Session Context -->
+		<property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+		
+		<!--update the existing or create 
+		the new table if does not exists--> 
+		<property name="hbm2ddl.auto">update</property>
+<!-- create will drop and recreate the table everytime -->
+		<!-- Mapping With Model Class Containing Annotations -->
+		<mapping class="com.lnt.hibernate.model.Trainee" />
+		<mapping class="com.lnt.hibernate.model.Course" />
+		
+		<!-- <mapping resource="Student.hbm.xml"></mapping> -->
+	</session-factory>
+</hibernate-configuration>
