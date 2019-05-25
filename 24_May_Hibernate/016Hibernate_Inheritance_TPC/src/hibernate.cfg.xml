@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ <hibernate-configuration>
+    <session-factory>
+                     
+<!--         <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1522:XE</property>
+        <property name="connection.username">SYSTEM</property>
+        <property name="connection.password">Ritwik123</property>   
+        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property> -->   
+                     
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/test</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>  
+         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>          
+    
+        <property name="connection.pool_size">1</property>
+        <!-- SQL dialect , db specific commands are prepared by hb , developer need not bother syntax-->
+        <!-- <property name="dialect">org.hibernate.dialect.DerbyTenSevenDialect</property>  
+        -->
+       <!--  <property name="hibernate.default_schema">APP</property> This you need only with Derby
+     -->
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>        
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>        
+        <property name="hbm2ddl.auto">create</property> 
+        <!--Automatically create update validate -->
+        
+          <mapping class="com.cdac.hibernate.model.Employee"/>
+          <mapping class="com.cdac.hibernate.model.Manager"/> 
+          <mapping class="com.cdac.hibernate.model.SalesManager"/>  
+          <!-- annotation mapping -->	 
+    </session-factory>
+</hibernate-configuration>
+
+<!-- hibernate.dialect property makes Hibernate to generate the appropriate SQL statements 
+for the chosen database.Hibernate uses "dialect" configuration to know which database you are using 
+so that it can convert hibernate query to database specific query.
+ hibernate knows whats kind of language we are used and what type database we are used.
+ it is database dependent. It connects the database specific query language which we want to use.
+ -->
+
+
+<!-- default context is 'thread' which means the sesion factory will bind 
+the session to the thread from which openSession(...) is called.
+This is useful because you can later call sessionFactory.getCurrentSession() which will return the session
+ that is bound to the currently running thread. 
+ -->
+ 
+
+<!-- Caching is all about application performance optimization and 
+it sits between your application and the database 
+to avoid the number of database hits as many as possible 
+to give a better performance for performance critical applications. 
+ first level caching happens on a per session basis where as second level caching can be shared across multiple sessions.-->
+
+<!-- Hibernate has build-in a function to enable the logging of all the generated SQL statements
+ to the console. You can enable it by add a “show_sql” property
+  in the Hibernate configuration file “hibernate.cfg.xml“.   This function is good for basic troubleshooting -->
+
+
+<!--  hibernate.hbm2ddl.auto, automatically validates or exports schema DDL to the database when the SessionFactory is created. -->
+<!-- 
+validate: validate the schema, makes no changes to the database.
+update: update the schema.
+create: creates the schema, destroying previous data.
+create-drop: drop the schema when the SessionFactory is closed explicitly, typically when the application is stopped.
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+      
+      
+    
+<!--         Database connection settings -->
+<!--         <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property> -->
+<!--         <property name="connection.url">jdbc:oracle:thin:scott@//localhost:1521/pdborcl</property> -->
+<!--         <property name="connection.username">scott</property> -->
+<!--         <property name="connection.password">tiger</property> -->
+<!--        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>    -->	   
+<!--         JDBC connection pool (use the built-in) -->
+
+		<!-- <property name="connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>      
+        <property name="connection.url">jdbc:derby://localhost:1527/MyDb</property>
+        <property name="connection.username">user</property>
+        <property name="connection.password">user</property>        
+      --> 
+ 
+ 
+    
+        <!-- <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1522:XE</property>
+        <property name="connection.username">SYSTEM</property>
+        <property name="connection.password">Ritwik123</property>   
+        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>  
+       -->
+ 
