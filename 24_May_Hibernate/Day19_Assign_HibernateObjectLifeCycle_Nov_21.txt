@@ -1,0 +1,15 @@
+Assignments Day 19 Hibernate object life cycle
+
+1>What is the difference between 
+save(), saveOrUpdate() and persist method?
+
+
+2>What is the role of evit() method? and how it is different from close() or clear().
+
+3> can we give some other hibernate.cfg.xml file ?? if yes then how?
+
+4> Explain PK Generators?
+1>	AUTO
+2>	SEQUENCE
+3>	IDENTITY
+4>	TABLE

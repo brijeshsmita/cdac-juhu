@@ -1,0 +1,19 @@
+24_May_Hibernate_Inheritance_Assignment
+--------------------------------------------------
+create the below inheritance hierarchy
+for all the 3 strategy using annotations
+3 projects to be created
+1> Inheritance_SingleTable_Demo
+2> Inheritance_TablePerClass_Demo
+3> Inheritance_Joined_Demo
+
+class Person
+   id
+   firstName
+   lastName
+
+class Customer extends Person
+   mobileNo	
+
+class OnlineCustomer    extends Customer 
+   email
