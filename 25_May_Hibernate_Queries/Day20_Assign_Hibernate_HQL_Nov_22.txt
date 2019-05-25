@@ -1,0 +1,21 @@
+1> What is HQL, Named Parameter,HCQL,Named Query, Native SQL? Explain in brief with example.
+
+2>Using the same contact class created in Day18_Hibernate_assginment.
+Create a HibernateHQLMain class and perform following operations on Contact object using HQL, Named Parameter,HCQL,Named Query
+	-insert a new Record in the DB
+	eg: Contact c1 = new Contact("Smita","Kumar","7788995551","smita@gmail.com",LocalDate.of(2015, 11,21));
+	-update email and phoneNo of the exiting contact using HQL	
+	-List the updated contact using Creteria Query
+	-List All the contact using Named Query
+	-Delete the record using HQL and named parameter.
+	
+/*Contact.java Day18_Hibernate_assginment*/
+class Contact{
+	private int contactId;
+	private String firstName;
+	private String lastName;
+	private String phoneNo;
+	private String email;
+	private LocalDate dob;
+}
+
