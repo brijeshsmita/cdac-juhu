@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ <hibernate-configuration>
+    <session-factory>
+       <!-- Oracle Database connection settings -->
+		<!-- <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1521:orahome</property>
+        <property name="connection.username">system</property>
+        <property name="connection.password">system</property>  
+         <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property> 
+     
+      -->   
+           <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/test</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>  
+         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>          
+            <!-- SQL dialect , db specific commands are prepared by hb , developer need not bother syntax-->
+            <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">5</property> 
+        <!-- dilect will generate specific Sql for the specific db --> 
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>        
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>        
+        <property name="hbm2ddl.auto">update</property> 
+        <!-- create - every time existing table will be dropped and will create a new -->
+        <!-- update - existing table will be updated and if not exists then will create a new table-->
+        <!--Automatically create update validate -->
+        <!-- <mapping resource="employee.hbm.xml"/> 	 --><!-- xml mapping -->
+        <mapping class="com.hibernate.creteriaQuery.model.Employee"/> <!-- annotation mapping -->	 
+    </session-factory>
+</hibernate-configuration>
+
+
+<!-- hibernate.dialect property makes Hibernate to generate the appropriate SQL statements 
+for the chosen database.Hibernate uses "dialect" configuration to know which database you are using 
+so that it can convert hibernate query to database specific query.
+ hibernate knows whats kind of language we are used and what type database we are used.
+ it is database dependent. It connects the database specific query language which we want to use.
+ -->
+
+
+<!-- default context is 'thread' which means the sesion factory will bind the session to the thread 
+from which openSession(...) is called.
+This is useful because you can later call sessionFactory.getCurrentSession() which will return the session
+ that is bound to the currently running thread. 
+ -->
+ 
+
+<!-- Caching is all about application performance optimization and 
+it sits between your application and the database 
+to avoid the number of database hits as many as possible 
+to give a better performance for performance critical applications. 
+ first level caching happens on a per session basis where as second level caching can be shared across multiple sessions.-->
+
+<!-- Hibernate has build-in a function to enable the logging of all the generated SQL statements
+ to the console. You can enable it by add a “show_sql” property
+  in the Hibernate configuration file “hibernate.cfg.xml“.   This function is good for basic troubleshooting -->
+
+
+<!--  hibernate.hbm2ddl.auto, automatically validates or exports schema DDL to the database when the SessionFactory is created. -->
+
