@@ -1,0 +1,16 @@
+Object Oriented Programming
+
+It is a language paradigm which is based on Object and classes.It treats all real world entities as an Object which can be contructed using class structure.
+and 4 major pillars.
+	-Abstraction
+	-Encapsulation
+	-Polymorphism
+	-Inheritance
+
+Object - It is a real world entity which has
+	-unique identity
+	-Attributes/Properties
+	-state/behaviour
+	-responsibity
+Method - Object interact with each other by passing message(arguments/parameters).
+Class- it is a structure or a blueprint to create like objects(same type of objects)

@@ -1,0 +1,11 @@
+Spring_Basic_Demo_Steps
+
+1> create a java project
+2> add spring jars to the project-> add it to the build path
+3> create the bean (interface, its implementation class and methods)
+4> configure the bean in the xml file
+5> write the main class 
+	to get the spring container
+	and ask spring container to get the bean object.
+	
+6> call the method with the bean object.

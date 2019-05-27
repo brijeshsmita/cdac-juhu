@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+     <!-- configuring the WatsAppMsgService bean 
+     so that spring container will create the bean 
+     with unique name as id "watsAppMessage" -->
+     <bean class="com.cdac.spring.di.MessageService" 
+     id="messageService">
+     <property name="name" value="CDAC">
+     </property></bean>
+      <bean class="com.cdac.spring.di.MessageService" 
+     id="messageService1">
+     <property name="name" value="PM Modi">
+     </property></bean>
+     <bean class="com.cdac.spring.di.FacebookService"  
+     id="facebookService">
+     <!-- DI -->
+     <property name="messageService" 
+     ref="messageService1"></property>
+     </bean>
+    
+</beans>

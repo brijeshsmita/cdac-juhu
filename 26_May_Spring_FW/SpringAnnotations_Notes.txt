@@ -1,0 +1,20 @@
+Spring Annotations
+
+@Component
+	@Service           -Service class bean
+	@Repository        -Dao class bean
+	@Controller	   -MVC Controller class bean
+	@RestController    -RestFul Service Controller class bean
+
+
+
+
+<bean class=packageName.MessageService id=objName >
+	
+org.springframework.sterotype
+@Component("messageService")
+//by default id will same name of the class name obj starting //with lowercase messageService
+//if i want some another name for the ComponentBean
+class MessageService{
+
+}

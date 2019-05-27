@@ -1,0 +1,142 @@
+Spring Framework
+--------------------------------------------------------------
+Q1.What is a framework?
+-semicomplete re-usable application used to optimize and ease 
+the application development process by removing bolier-plate code.(repeating code in every module)
+--------------------------------------------------------------
+Q2.What is Spring ?
+
+Spring is a open source ,lightweight, container based DI and AOP framework.
+Spring framework come with more than 25+ spring modules which can be plugged as and when required.
+basic spring modules are:
+1- Spring core
+2> Spring beans
+3> spring expression (SpEL)
+4> spring context
+5> spring context-support
+--------------------------------------------------------------
+What is a Spring Container?
+It is a bean factory which help us to create and manage the life cycle of the bean.
+eg: BeanFactory(basic Spring Container), ApplicationContext,WebApplicationContext etc.
+--------------------------------------------------------------
+Why Spring?
+--------------------------------------------------------------
+Spring Advantages.
+
+-spring is light weight framework as the basic version of spring is kbs.
+--------------------------------------------------------------
+what id dependency injection?
+
+-DI is a language paradigm which focus on getting the object as and when required ,rather than creating our own objects.
+It is also known as inversion of control.
+--------------------------------------------------------------
+What is AOP(Aspect Oriented Programing)?
+ Aspect Oriented Programing which is a language	paradigm , which treats everything as an aspect and which help us to provide cross cutting concern with this aspect. 
+-It provides the pluggable way to dynamically add the additional/secondary concern before, after or around the actual logic.
+--------------------------------------------------------------
+Types of DI supported by Spring?
+spring supports only two types od DI
+	1-setter/property Injection
+	2-constructor Injection
+(Not supported by spring)3- Interface Injection
+--------------------------------------------------------------
+What is the difference between BeanFactory And ApplicationContext?
+
+-BeanFactory is a basic spring container which is used to create and manager the life cycle of the bean.
+- ApplicationContext is a advance spring container which is inherited from BeanFactory. which create and manager the life cycle of the bean and provides additional functionalities such as : Messaging, Internationalization(I18N),Localization, Web Application, etc.
+--------------------------------------------------------------
+what is Bean Wiring and Auto-wiring?
+
+--------------------------------------------------------------
+Different types of auto-wiring?
+
+--------------------------------------------------------------
+what are bean scope?
+	spring 
+		singleton(deafult)
+		prototype
+	spring mvc
+		request
+		session
+		globalSession
+	spring 5
+
+//deafult scope of a spring bean is singleton
+//means everytime a same object will be returned
+		
+//we can change it to prototype, 
+//means everytime a new object will be returned
+// eg: @Scope(value="prototype")
+--------------------------------------------------------------
+
+Bean Life Cycle?
+
+--------------------------------------------------------------
+what are BeanPostProcessors?
+--------------------------------------------------------------
+/*
+AOP Advice
+
+Before 				JoinPoint
+After  				JoinPoint
+Around 				ProceedingJoinPoint
+AfterReturning  	JoinPoint, Object
+AfterThrowing   	JoinPoint,Throwable
+*/
+/*Step 1:(Primary Concern) business interface and impl class
+ * 			configure in xml
+ * 
+ * Step 2:(Cross Cutting Concern) 
+ * 		 @Aspect -> concern-class
+ * 		<!-- enable @Aspectj annotation -->
+			<aop:aspectj-autoproxy />
+			define the Aspect bean either with annotation or with xml
+	Step 3:	create the method(Advice-action to be performed)
+	Annotate it as per the required advice
+	@Before.....(when to be executed)etc
+	
+	Step 4: Define where to be executed -JoinPoint
+	
+	Step 5: Define the execution point (JoinPoint) expression-Pointcut
+*/
+
+--------------------------------------------------------------
+Object Oriented Programming
+
+It is a laguage paradigm which is based on Object and classes.
+and 4 major pillars.
+	-Abstraction
+	-Encapsulation
+	-Polymorphism
+	-Inheritance
+
+Object - It is a real world entity which has
+	-unique identity
+	-Attributes/Properties
+	-state/behaviour
+	-responsibity
+Method - Object interact with each other by passing message(arguments/parameters).
+
+Class- it is a structure or a blueprint to create like objects(same type of objects) 
+
+Object -Bean-Model-Entity-Pojo-DTO(data transfer Object),BO(Business Object),VO(value Object)-Java Class
+-----------------------------------------------------
+class Controller{
+//dependency(bean-wiring)
+@Autowired(when bean is wired or injected by the spring container it is known as auto-wiring)
+ILoginService loginService;// = new LoginService();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
