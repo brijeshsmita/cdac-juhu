@@ -1,0 +1,10 @@
+Assignment Spring Day 2 - AOP
+
+create an SecurityAspect in your project of CurrencyConverter
+
+provide 4 advice for the dollarsToRupee() method
+
+@Before
+@After
+@Around
+@AfterReturning

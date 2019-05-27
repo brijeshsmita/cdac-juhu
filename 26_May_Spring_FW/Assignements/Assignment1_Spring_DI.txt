@@ -1,0 +1,34 @@
+create a java project AssignmentDay1_spring_DI
+-copy context.xml and log4j.xml in src
+-copy lib folder to project 
+	add all the jar files to classpath
+
+1>. create an interface UserDao
+	with a method 
+	-> public boolean authenticate(String username , String password);
+
+2>. create a class UserDaoImpl and override the method;
+	-> public boolean authenticate(String username , String password){
+		if((username.equals("admin")&&(password.equals("admin"))
+			return true;
+		else
+			return false;
+	}
+
+3>. configure the above class in context.xml
+
+4>. create an interface UserService
+	with a method 
+	-> public boolean authenticate(String username , String password);
+
+5>. create a class UserServiceImpl 
+	-> declare UserDao property with getter and setter
+		private UserDao userDao;
+	-> and override the unimplemented method
+	-> in the method call the dao method
+	-> public boolean authenticate(String username , String password){
+		userDao.authenticate(username,password);
+	}
+
+6>. configure the UserServiceImpl class in context.xml and do property injection
+	for userDao

@@ -1,0 +1,49 @@
+create a java project AssignmentDay1_spring_Autowiring
+
+-copy context.xml and log4j.xml in src
+-copy lib folder to project 
+	add all the jar files to classpath
+
+1> create a class Department
+	private int deptId;
+	private String deptName;
+
+2> create a class Employee
+	private int empId;
+	private String empName;
+	private double empSal;
+	private Department department;
+
+3>. create an interface EmployeeDao
+	with a method 
+	-> public int add(Employee employee);
+
+4>. create a class EmployeeDaoImpl and override the method;
+	-> public int add(Employee employee){
+		sysout("Adding employee records..."+employee);
+return 1;
+	}
+
+3>. configure the above class in context.xml
+
+4>. create an interface EmployeeService
+	with a method 
+	-> public int add(Employee employee);
+
+5>. create a class EmployeeServiceImpl 
+	-> declare EmployeeDao property with getter and setter
+		private EmployeeDao employeeDao;
+	-> and override the unimplemented method
+	-> in the method call the dao method
+	-> public int add(Employee employee){
+		return employeeDao.add(employee);
+	}
+
+6>. configure the EmployeeServiceImpl class in context.xml and do property injection for employeeDao;
+
+
+7> create a EMployeeClient class with main method
+a> create spring container
+b> create employee object
+c> get the service bean
+b> call the add(employee) method by passing employee object.
