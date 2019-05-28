@@ -1,0 +1,175 @@
+1> create DWP -> add spring jars to the WEB-INF/lib folder
+2> configure web.xml
+	-DispatcherServlet
+		-param value - spring-servlet.xml
+--------------------------web.xml----------------------------------
+ <!-- Add Spring MVC DispatcherServlet as front controller 
+  and it init parameter as spring xml filePath-->
+	<servlet>
+        <servlet-name>spring</servlet-name>
+        <servlet-class>
+                org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <init-param>
+       		<param-name>contextConfigLocation</param-name>
+       		<param-value>/WEB-INF/spring-servlet.xml</param-value>
+    		</init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>spring</servlet-name>
+        <url-pattern>/</url-pattern> 
+    </servlet-mapping>
+-------------------------------------------------------------
+3> create spring-servlet.xml WEB_INF folder
+4> configure spring-servlet.xml file
+-------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+	<context:component-scan base-package="com.cdac.spring_mvc.controller" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+
+</beans:beans>
+<!-- here are three important configurations.
+annotation-driven tells DispatcherServlet to look for Controller classes using @Controller annotation.
+context:component-scan tells DispatcherServlet where to look for controller classes.
+InternalResourceViewResolver bean configuration to specify location of view pages and suffix used. Controller class methods return name of the view page and then suffix is added to figure out the view page to use for rendering the response. -->
+-------------------------------------------------------------	
+6> create controller class and annotate it with @Controller
+7> create method to handle request
+	@RequestMapping annotation to map the request to the specific method
+
+---------------------------------------------
+//spring bean supporting functionalities of a controller
+//controller accept the request , forward it to the specific service
+//and return MOdelAnd ViewName to the DispatcherServlet
+@Controller
+public class HomeController {
+
+	@RequestMapping(value="/index")
+	public String getIndexPage(Model model) {
+		model.addAttribute("msg", 
+"Welcome to Spring MVC Index Page");
+		return "index";//viewName
+	}
+}
+---------------------------------------------------------
+8> display the model in the view with the help of EL
+(display msg on the index.jsp)
+and also provide the link for "showStudentForm"
+
+9> create a method for returning studentForm
+ans annotate the method with @RequestMapping(value="showStudentForm")
+create Object of Student and add it Model attribute
+Student student = new Student();
+model.addAttribute("student",student);
+
+10> create a Student model class(follow all conventions and rules of bean)
+with the same property matching with studentRegisterForm.jsp
+and place spring custom form tag library
+------------------------------------------------------
+<%@ taglib prefix="springForm" 
+uri="http://www.springframework.org/tags/form" %> 
+------------------------------------------------------ 
+11>convert html form and input types to springForm types
+12> in <springForm:form> tag place the modelAttribute="student"
+13> change the 'name' attribute of all input to 'path'
+-------------------------------------------------------
+<%@page isELIgnored="false" %>
+<%@ taglib prefix="springForm" 
+uri="http://www.springframework.org/tags/form" %>  
+<head>
+<link rel="stylesheet" type="text/stylesheet"
+href="${pageContext.request.contextPath}/css/register.css">
+</head>
+<body>
+<a href="home.html" >Back</a>|<a href="home.html">Login</a>
+	<H1>Registration Page</H1>
+	<p><b>Use tab keys to move from one input field to the next.</b></p>
+	<springForm:form name='registration' 
+	action="registration"
+	modelAttribute="student">
+		<ul type="none">
+			<li><label for="username">User Name:</label></li>
+			<li><springForm:input type="text" path="username" size="12" /></li>
+			
+			<li><label for="password">Password:</label></li>
+			<li><springForm:input type="password" path="password" size="12" /></li>
+			
+			<li><label for="name">Name:</label></li>
+			<li><springForm:input type="text" path="name" size="50" /></li>
+			
+			<li><label for="address">Address:</label></li>
+			<li><springForm:input type="text" path="address" size="50" /></li>
+			
+	<li><label for="country">Country:</label></li>
+			<li><springForm:select path="country">
+					<springForm:option value="Australia" label="Australia"></springForm:option>
+					<springForm:option value="Canada" label="Canada"></springForm:option>
+					<springForm:option value="India" label="India"></springForm:option>
+					<springForm:option value="Russia" label="Russia"></springForm:option>
+					<springForm:option value="USA" label="USA"></springForm:option>
+				</springForm:select>
+			</li> 
+					<li><label for="zip">ZIP Code:</label></li>
+			<li><springForm:input type="number" path="zip" /></li>
+			
+			<li><label for="email">Email:</label></li>
+			<li><springForm:input type="email" path="email" size="50" /></li>
+			
+			<li><label for="gender">Gender:</label></li>
+			<li><springForm:radiobutton path="gender" value="Male" /><span>Male</span></li>
+			<li><springForm:radiobutton path="gender" value="Female" /><span>Female</span></li>
+		 	
+			<li><label>Language:</label></li>
+			<li><springForm:checkbox path="english" value="English"/><span>English</span></li>
+			<li><springForm:checkbox path="nonenglish" value="Non English" /><span>Non English</span></li>
+			
+			<li><label for="description">About:</label></li>
+			<li><springForm:textarea path="description" ></springForm:textarea></li>
+			
+			<li><input type="submit" /></li>
+		</ul>
+	</springForm:form>
+</body>
+</html>
+
+-----------------------------------------------------------
+14> now make form action="registerStudent"
+and create a method in controller with 
+@RequestMapping(value="registerStudent", method=RequestMethod.POST)
+public String registerStudent(@ModelAttribute Student student, Model model)
+{
+	model.addAttribute("student",student);
+model.addAttribute("msg","student Registered Successfully!!");
+return "studentRegSuccess";
+}
+------------------------------------------------------
+15> create studentRegSuccess.jsp and print the model in this view using EL(student.propertyname) and provide a link to index(controller)
+
+
+
+
+
+
+
+
