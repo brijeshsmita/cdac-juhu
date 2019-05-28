@@ -1,0 +1,20 @@
+SOAP
+SOAP stands for Simple Object Access Protocol. SOAP is an XML based industry standard protocol for designing and developing web services. Since it’s XML based, it’s platform and language independent. So our server can be based on JAVA and client can be on .NET, PHP etc. and vice versa.
+
+WSDL
+WSDL stands for Web Service Description Language. WSDL is an XML based document that provides technical details about the web service. Some of the useful information in WSDL document are: method name, port types, service end point, binding, method parameters etc.
+
+UDDI
+UDDI is acronym for Universal Description, Discovery and Integration. UDDI is a directory of web services where client applications can lookup for web services. Web Services can register to the UDDI server and make them available to client applications.
+
+Advantages of Web Services
+Some of the advantages of web services are:
+
+Interoperability: Because web services work over network and use XML technology to communicate, it can be developed in any programming language supporting web services development.
+Reusability: One web service can be used by many client applications at the same time. For example, we can expose a web service for technical analysis of a stock and it can be used by all the banks and financial institutions.
+Loose Coupling: Web services client code is totally independent with server code, so we have achieved loose coupling in our application. This leads to easy maintenance and easy to extend.
+Easy to deploy and integrate
+Multiple service versions can be running at same time.
+
+JAX-WS
+JAX-WS stands for Java API for XML Web Services. JAX-WS is XML based Java API to build web services server and client application. It’s part of standard Java API, so we don’t need to include anything else which working with it.
