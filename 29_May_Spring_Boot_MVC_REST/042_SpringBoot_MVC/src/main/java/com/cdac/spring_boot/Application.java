@@ -2,7 +2,6 @@ package com.cdac.spring_boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 @SpringBootApplication
 /* @SpringBootApplication provides alias for the following two annotation
  * 
