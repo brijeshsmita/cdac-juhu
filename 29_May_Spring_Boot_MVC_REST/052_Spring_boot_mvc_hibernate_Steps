@@ -1,0 +1,32 @@
+1> create a maven project , skip archetype
+	-groupId
+	-ArtifactId
+	-packaging war (very imp)
+	
+2>paste the <parent>,<properties>,<dependencies> from the boot project pom.xml
+to the existing project pom.xml (cltr+s)
+
+3> rt click on project -> maven -> update maven project -> force update
+
+4> paste application.properties file in src/main/resources
+	-make the neccessary changes for the properties value
+	
+5> copy paste the com.cdac.spring_boot
+which will have 2 java file in it
+	a>Application.java (Spring Boot Starter launch class)
+	b>HibernateConfiguration.java (Hibernate java configuration class )
+		-SessionFactory configuration @Bean
+		-TransactionManagerFactory configuration @Bean
+6> now copy paste WEB-INF folder in src/main/webapp folder
+	which has following files and folders
+		a> views folders
+			- create all the required .jsp files here
+		b> web.xml files
+7> now create Model,(Entity class, Service,Dao)
+	(steps are written inside the class)
+8> now create controller class
+(steps are written inside the class)
+9> run you Application.java file as java application
+10> open the browser and run the following url
+
+http://localhost:8080/getAllCustomers
