@@ -1,0 +1,19 @@
+SPring Boot Rest
+
+instead of @Controller  we will use @RestController
+
+@RequestMapping - map the request wiht the specific controller method(handler method)
+Example
+@RequestMapping(value="/listEmp",method=RequestMethod.GET,
+produces="application/json")
+or
+@GetMapping("/listEmp",produces="application/json")
+
+In Restful webservices all request will be based on HTTP protocol
+which can be handled using http methods
+
+GET 	@GetMapping   	- select/list/get/retreive/search
+POST	@PostMapping    - insert/create/add/
+Put 	@PutMapping     - update/modify
+Delete  @DeleteMapping  - delete/remove
+	

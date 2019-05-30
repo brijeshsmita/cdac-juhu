@@ -1,0 +1,33 @@
+Spring File Upload
+
+1>extra jar files required
+	common-fileUpload
+	common-io
+
+2>Configuration in spring-context.xml for multipart upload
+with the help of MultipartResolver
+
+<!-- File Upload Configuration -->
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons
+.CommonsMultipartResolver"/>
+
+3> in the jsp page use <form 'enctype=multipart/form-data'>
+
+<form method="POST" action="uploadSavefile" 
+enctype="multipart/form-data">
+
+4> write the controller to handle the file upload
+using 'org.springframework.web.multipart.MultipartFile'
+
+@RequestMapping(value = "/uploadSavefile", 
+	method = RequestMethod.POST)
+	public @ResponseBody
+	String uploadFileHandler(@RequestParam("name")
+ String name,@RequestParam("file") MultipartFile file) 
+
+5> then perform read and write operation for the uploaded file.
+
+
+
+
+
